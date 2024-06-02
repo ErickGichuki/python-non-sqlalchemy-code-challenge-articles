@@ -27,13 +27,13 @@ class Author:
 
 
     def magazines(self):
-        return list(set(my_loshy.magazine for my_loshy in self.articles()))
+        return list(set(my_articles.magazine for my_articles in self.articles()))
 
     def add_article(self, magazine, title):
         return Article(self, magazine, title)
     
     def topic_areas(self):
-       return list(set(fay.category for fay in self.magazines())) if self.magazines() else None
+       return list(set(mine_articles.category for mine_articles in self.magazines())) if self.magazines() else None
                
 
 class Magazine:
